@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8cl-sx-8eM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="elements" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jga-rm-Ego">
+                                <rect key="frame" x="0.0" y="90" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0Ph-OC-m0m"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-CO-Bgo">
+                                <rect key="frame" x="123" y="90" width="236" height="80"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7u-Q7-KH0">
+                                <rect key="frame" x="0.0" y="191" width="100" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gCK-CO-Bgo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0Qy-jR-uFO"/>
+                            <constraint firstItem="I7u-Q7-KH0" firstAttribute="top" secondItem="jga-rm-Ego" secondAttribute="bottom" constant="1" id="8XV-Td-bU0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gCK-CO-Bgo" secondAttribute="bottom" constant="497" id="Xwp-c3-5OU"/>
+                            <constraint firstItem="jga-rm-Ego" firstAttribute="top" secondItem="gCK-CO-Bgo" secondAttribute="top" id="Zbz-Gb-fBh"/>
+                            <constraint firstItem="jga-rm-Ego" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="epg-Fe-EEl"/>
+                            <constraint firstItem="jga-rm-Ego" firstAttribute="leading" secondItem="I7u-Q7-KH0" secondAttribute="leading" id="fc0-K6-qsK"/>
+                            <constraint firstItem="jga-rm-Ego" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h8F-VO-LmK"/>
+                            <constraint firstItem="jga-rm-Ego" firstAttribute="trailing" secondItem="I7u-Q7-KH0" secondAttribute="trailing" id="mwA-l1-I5g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I7u-Q7-KH0" secondAttribute="bottom" constant="458" id="nhM-dm-hoL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I7u-Q7-KH0" secondAttribute="trailing" constant="275" id="poH-HL-1vN"/>
+                            <constraint firstItem="gCK-CO-Bgo" firstAttribute="leading" secondItem="jga-rm-Ego" secondAttribute="trailing" constant="23" id="yMh-cR-BzM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pCQ-2i-e4l">
+                        <barButtonItem key="rightBarButtonItem" image="reload" id="2Io-Sm-ewX">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="iconLabel" destination="I7u-Q7-KH0" id="DGd-tx-P2D"/>
+                        <outlet property="weatherIcon" destination="jga-rm-Ego" id="EX1-lp-pMY"/>
+                        <outlet property="weatherLabel" destination="gCK-CO-Bgo" id="sjh-zL-ZUQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="119.1904047976012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1iu-5B-zdK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8cl-sx-8eM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ifd-iu-bpH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fbx-mZ-vwl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eH0-uR-Kj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="119"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reload" width="72" height="72"/>
+    </resources>
 </document>

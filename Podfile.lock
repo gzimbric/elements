@@ -1,0 +1,24 @@
+PODS:
+  - ForecastIO (5.0.0)
+  - SwiftLocation (3.2.3):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - ForecastIO
+  - SwiftLocation (~> 3.2.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ForecastIO
+    - SwiftLocation
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  ForecastIO: 013d0110a0977712624973ceb425da1936b02acf
+  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 487426a34053600430379241ed491385157bc7d9
+
+COCOAPODS: 1.5.3
